@@ -1,0 +1,30 @@
+Steps to Run the Project Locally
+
+This project includes both a backend (FastAPI) and a frontend (Angular), so we need to run them separately.
+
+Backend Setup:
+- Create a Virtual Environment
+	If activating the existing virtual environment gives an error (since it was created on a different machine), create a new one:
+		python -m venv venv
+		venv\Scripts\activate
+- Install all the necessary dependencies using pip:
+	pip install uvicorn torch wheel lime face_recognition opencv-python matplotlib numpy torchvision fastapi
+- Start the Backend Server
+	uvicorn backend.app:app --reload
+	This will start the backend server at http://127.0.0.1:8000.
+
+
+Frontend setup
+- Open a new terminal and move to the frontend directory:
+	cd frontend
+- Start the frontend with 
+	ng serve -- open 
+	This will compile and automatically open the app in your default browser
+
+Once both backend and frontend are running:
+
+- Open the application in your browser.
+
+- Use the upload option to submit a video.
+
+- The system will process the video and return results.
